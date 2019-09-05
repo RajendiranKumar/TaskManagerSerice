@@ -1,18 +1,17 @@
-﻿using System.Data.Entity;
-using TaskManager.Entities;
+﻿using TaskManager.Entities;
 
 namespace TaskManager.DataLayer
 {
     /// <summary>
     /// This is the DB Context class to interact with database tables
     /// </summary>
-    public class TaskManagerContext : DbContext
+    public class TaskManagerContext : System.Data.Entity.DbContext
     {
         public TaskManagerContext():base("name = taskmanagerdbconn")
         {
 
         }
 
-        public DbSet<Task> Tasks { get; set; }
+        public System.Data.Entity.DbSet<Task> Tasks { get; set; }
     }
 }
